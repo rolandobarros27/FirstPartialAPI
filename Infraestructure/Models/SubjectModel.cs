@@ -24,6 +24,7 @@ namespace Infraestructure.Models
         public string City { get; set; }
 
         [Required(ErrorMessage = "La fecha de nacimiento es requerida")]
+        [DataType(DataType.Date)]
         public string BirthDay { get; set; }
 
         [Required(ErrorMessage = "La nacionalidad es requerida")]
@@ -45,18 +46,3 @@ namespace Infraestructure.Models
         public string Telephone { get; set; }
     }
 }
-
-/*
- * 	Id
-	IdCiudad
-	Nombres
-	Apellidos
-	Documento
-	Telefono
-	Email
-	FechaNacimiento
-	Ciudad
-	Nacionalidad
-
- * 
- **/

@@ -43,11 +43,11 @@ namespace Infraestructure.Repository
         {
             try
             {
+                // update city with params
                 connection.Execute($"UPDATE city SET " +
-                    "state = @state, " +
-                    "city = @city, " +
-
-                    $"WHERE id = {id}", city);
+                                   "state = @state, " +
+                                   "city = @city " +
+                                   $"WHERE id = {id}", city);
                 return "Se modificaron los datos correctamente...";
             }
             catch (Exception ex)

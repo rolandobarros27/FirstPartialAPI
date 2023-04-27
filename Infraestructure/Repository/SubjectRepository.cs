@@ -47,11 +47,11 @@ namespace Infraestructure.Repository
                     "name = @name, " +
                     "lastname = @lastname, " +
                     "email = @email, " +
-                    "telephone = @telephone " +
-                    "ci = @ci " +
-                    "id_city = @id_city " +
-                    "city = @city " +
-                    "birthday = @birthday " +
+                    "telephone = @telephone, " +
+                    "ci = @ci, " +
+                    "id_city = @id_city, " +
+                    "city = @city, " +
+                    "birthday = date(@birthday), " +
                     "country = @country " +
 
                     $"WHERE id = {id}", subject);

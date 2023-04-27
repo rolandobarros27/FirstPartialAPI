@@ -24,7 +24,7 @@ namespace Services.Services
 
         public string modify(SubjectModel subject, int id)
         {
-            if (subjectRepository.getById(id) == null)
+            if (subjectRepository.getById(id) != null)
             {
                 return validateSubject(subject) ? subjectRepository.modify(subject, id) : throw new Exception("Error en la validacion");
             }
